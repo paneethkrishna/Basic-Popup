@@ -1,0 +1,22 @@
+const button = document.querySelector('button');
+const popup = document.querySelector('.popup-wrapper');
+const close = document.querySelector('.popup-close')
+
+
+button.addEventListener('click', () => {
+    popup.style.display = 'block';
+});
+
+close.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+
+popup.addEventListener('click', e => {
+    if (e.target.parentElement.tagName === 'BODY') {
+        popup.style.display = 'none';
+    }
+})
+
+// window.addEventListener('onclick' ,() =>{
+//     popup.style.display = 'none';
+// })
